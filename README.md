@@ -1,3 +1,10 @@
+HEAD
+
+HEAD
+# NC-AURA
+AURA is a symbolic OS interface blending sacred design, archetypes, and reflective cognition—starting in 2D, evolving toward the Mind Plane.
+
+temp-work
 AURA: The Triumvirate Portal & Harmonic Council AI
 Project Overview
 AURA is a sophisticated two-part application system designed to facilitate deep personal transformation and AI-assisted insight generation. The project embodies a mystical, symbolic aesthetic while providing practical tools for self-discovery and guidance.
@@ -200,4 +207,9 @@ Ensure API configurations are properly set
 Test in multiple browsers and devices
 
 License
+ HEAD
 This project embodies the spirit of open wisdom and technological harmony. Use responsibly and with reverence for the transformative power of both ancient wisdom and modern AI.
+
+This project embodies the spirit of open wisdom and technological harmony. Use responsibly and with reverence for the transformative power of both ancient wisdom and modern AI.
+ 8029860 (Initial upload of AURA project)
+temp-work
