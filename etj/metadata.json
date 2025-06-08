@@ -1,0 +1,5 @@
+{
+  "name": "AURA Harmonic Council AI",
+  "description": "An interactive UI where users consult a council of 7 archetypal characters, leveraging Gemini API to generate responses. Features visual sphere layout and auditory feedback.",
+  "requestFramePermissions": ["microphone"]
+}

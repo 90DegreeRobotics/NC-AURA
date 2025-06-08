@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA Interface</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif; /* Default body font */
+      background-color: #0f0f23; /* obsidianBlack from constants */
+    }
+    .font-cormorant {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .font-inter {
+      font-family: 'Inter', sans-serif;
+    }
+    .panel-glass {
+      background-color: rgba(30, 27, 75, 0.3); /* Slightly transparent deepIndigo */
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1); /* whiteAlpha10 */
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+    @keyframes aura-breathe {
+      0%, 100% { background-color: #0f0f23; } /* obsidianBlack */
+      50% { background-color: #13132a; } /* Slightly lighter obsidianBlack */
+    }
+    .animate-aura-breathe {
+      animation: aura-breathe 15s ease-in-out infinite;
+    }
+     @keyframes pulse-seed {
+      0%, 100% { opacity: 0.7; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+    .animate-pulse-seed {
+      animation: pulse-seed 3s infinite ease-in-out;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "path": "https://esm.sh/path@^0.12.7",
+    "url": "https://esm.sh/url@^0.11.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.4.0",
+    "vite": "https://esm.sh/vite@^6.3.5"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script>
+    // Tailwind JIT configuration (optional, but good for ensuring all classes are generated)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deepIndigo: '#1e1b4b',
+            electricGold: '#fbbf24',
+            obsidianBlack: '#0f0f23',
+            silverMist: '#e5e7eb',
+            roseQuartz: '#f9a8d4',
+            whiteAlpha10: 'rgba(255, 255, 255, 0.1)',
+            whiteAlpha20: 'rgba(255, 255, 255, 0.2)',
+          },
+          fontFamily: {
+            cormorant: ['Cormorant Garamond', 'serif'],
+            inter: ['Inter', 'sans-serif'],
+          },
+          animation: {
+            'aura-breathe': 'aura-breathe 15s ease-in-out infinite',
+            'pulse-seed': 'pulse-seed 3s infinite ease-in-out',
+          },
+          keyframes: {
+            'aura-breathe': {
+              '0%, 100%': { backgroundColor: '#0f0f23' },
+              '50%': { backgroundColor: '#13132a' },
+            },
+            'pulse-seed': {
+                '0%, 100%': { opacity: '0.7', transform: 'scale(1)' },
+                '50%': { opacity: '1', transform: 'scale(1.05)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
